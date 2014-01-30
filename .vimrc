@@ -48,7 +48,6 @@ Bundle 'surround.vim'
 Bundle 'SrcExpl'
 Bundle 'Trinity'
 Bundle 'TagHighlight'
-Bundle 'srking/ag.vim'
 Bundle 'Shougo/neobundle.vim'
 "https://github.com/scrooloose/nerdtree
 "grep 可能にしてみたhttps://gist.github.com/masaakif/414375
@@ -57,6 +56,7 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
   call neobundle#rc(expand('~/.vim/bundle/'))
 endif
+NeoBundle 'rking/ag.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
@@ -598,7 +598,9 @@ call unite#custom#source('file_rec', 'ignore_pattern', unite#sources#rec#define(
 " vim最新版インストール　http://yuheikagaya.hatenablog.jp/entry/2013/04/23/211530
 " Mercurial(hg)コマンド を利用　最新にする際は hg pull; hg update;
 " configureの失敗時は src/auto/config.logをみる soが無いと言われたのでシンボリックリンク作成→OK→コンパイルエラー Python.hがない　→　zypper in python-develで /usr/include/python2.6に　→　OK
-" ./configure --enable-rubyinterp --enable-cscope --enable-gui --enable-gtk2-check --enable-gnome-check --with-x --enable-perlinterp --enable-pythoninterp --enable-python3interp --enable-xim --enable-rubyinterp --enable-multibyte --enable-pythoninterp=yes --with-python-config-dir=/usr/lib/python2.6/config
+" ./configure --enable-rubyinterp --enable-cscope --enable-gui --enable-gtk2-check --enable-gnome-check --with-x --enable-perlinterp --enable-pythoninterp --enable-python3interp --enable-xim --enable-rubyinterp --enable-multibyte --enable-pythoninterp=yes --with-python-config-dir=/usr/lib/python2.6/config --enable-luainterp
+" export CPPFLAGS=-I/usr/include/ export LDFLAGS=-I/usr/lib/ 改めてconfigureする前に、キャッシュファイルauto/config.cacheを削除する必要がある。
+" suseではmercurialのバージョンが低いのでubuntuからソースをもらいましょう
 " gitでvimdiff svnも同じ感じ
 " http://rubyonrails.gachinko.org/git/vimdiff/
 
