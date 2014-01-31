@@ -49,6 +49,7 @@ Bundle 'SrcExpl'
 Bundle 'Trinity'
 Bundle 'TagHighlight'
 Bundle 'Shougo/neobundle.vim'
+" Bundle 'jelera/vim-javascript-syntax'
 "https://github.com/scrooloose/nerdtree
 "grep 可能にしてみたhttps://gist.github.com/masaakif/414375
 Bundle 'scrooloose/nerdtree'
@@ -63,6 +64,7 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite-build'
 NeoBundle 'tacroe/unite-mark'
 NeoBundle 'kmnk/vim-unite-svn'
@@ -81,6 +83,11 @@ NeoBundle 'vim-jp/cpp-vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'vim-scripts/vim-auto-save'
 NeoBundle 'vim-scripts/vcscommand.vim'
+" NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'mattn/emmet-vim' "http://techblog.yahoo.co.jp/tips/_zencoding/
+" NeoBundle 'kana/vim-textobj-line'
 " }}}
 
 " plugin config {{{
@@ -120,11 +127,11 @@ let NERDSpaceDelims = 1
 " call s:CreateMaps('nx', 'Sexy',       'Sexy', 'cs')
 
 " syntastic設定
-" let g:syntastic_enable_signs = 1
-" let g:syntastic_auto_loc_list = 2
+let g:syntastic_enable_signs = 1
+let g:syntastic_auto_loc_list = 2
 let g:syntastic_mode_map = { 'mode': 'passive',
   \ 'active_filetypes': [],
-  \ 'passive_filetypes': [] }
+  \ 'passive_filetypes': ["javaScript", "json"] }
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['jshint']
 
@@ -422,7 +429,7 @@ nnoremap <C-@> :<Up><CR>
 nnoremap <C-a> <HOME>
 nnoremap <C-e> <END>
 nnoremap :w :w<CR>
-nnoremap cs :SyntasticCheck<CR>
+nnoremap sc :SyntasticCheck<CR>
 nnoremap ma :Unite build:! -default-action=preview -auto-highlight<CR>
 "vimrc 編集、適用
 nnoremap <Space>v :e $VIMRC<CR>
