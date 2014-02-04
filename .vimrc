@@ -608,6 +608,9 @@ call unite#custom#source('file_rec', 'ignore_pattern', unite#sources#rec#define(
 " configureの失敗時は src/auto/config.logをみる soが無いと言われたのでシンボリックリンク作成→OK→コンパイルエラー Python.hがない　→　zypper in python-develで /usr/include/python2.6に　→　OK
 " ./configure --enable-rubyinterp --enable-cscope --enable-gui --enable-gtk2-check --enable-gnome-check --with-x --enable-perlinterp --enable-pythoninterp --enable-python3interp --enable-xim --enable-rubyinterp --enable-multibyte --enable-pythoninterp=yes --with-python-config-dir=/usr/lib/python2.6/config --enable-luainterp
 " export CPPFLAGS=-I/usr/include/ export LDFLAGS=-I/usr/lib/ 改めてconfigureする前に、キャッシュファイルauto/config.cacheを削除する必要がある。
+" --enable-gui で失敗したら libx11-dev libxt-dev
+"  perl ruby python あたりのdevelも確認
+"  libgtk2.0-devなどのinstallを確認
 " suseではmercurialのバージョンが低いのでubuntuからソースをもらいましょう
 " gitでvimdiff svnも同じ感じ
 " http://rubyonrails.gachinko.org/git/vimdiff/
