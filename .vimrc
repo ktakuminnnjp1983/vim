@@ -393,6 +393,7 @@ nnoremap <C-j> <C-e>
 nnoremap <C-k> <C-y>
 nnoremap Y y$
 nnoremap <C-p> "0p
+inoremap <C-p> <C-r>0 "temp 
 nnoremap M :set modifiable!<CR>
 nnoremap <C-]> g<C-]>
 " nnoremap gr :Unite grep:.<CR>
