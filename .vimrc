@@ -68,6 +68,7 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite-build'
 NeoBundle 'tacroe/unite-mark'
 NeoBundle 'kmnk/vim-unite-svn'
+NeoBundle 'kmnk/vim-unite-giti'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/syntastic'
@@ -396,7 +397,11 @@ nnoremap <C-p> "0p
 inoremap <C-p> <C-r>0 "temp 
 nnoremap M :set modifiable!<CR>
 nnoremap <C-]> g<C-]>
-" nnoremap gr :Unite grep:.<CR>
+nnoremap gr :Unite grep:.<CR>
+" 最後に検索した文字列を検索
+nnoremap g/ :Unite grep:. <CR><C-r>/<CR> 
+" カーソル位置の単語をgrep検索
+nnoremap gw :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W><CR>
 nnoremap fi :normal gc<CR>:Unite find:.<CR>
 nnoremap ba :UniteBookmarkAdd<CR>
 nnoremap vs :VimShell -split<CR>
@@ -424,8 +429,6 @@ nnoremap <Space>F :Unite file<CR>
 nnoremap <Space>H :ShowHelpOnWord<CR>
 nnoremap <Space>uf :Unite fold<CR>
 nnoremap <Space>ur :Unite file_rec<CR>
-" カーソル位置の単語をgrep検索
-nnoremap <Space>gr :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W><CR>
 nnoremap <C-@> :<Up><CR>
 nnoremap <C-a> <HOME>
 nnoremap <C-e> <END>
