@@ -189,7 +189,7 @@ set backspace=indent,eol,start "backspaceで何でも消す
 
 "indent 
 set tabstop=4
-set autoindent
+set smartindent
 set expandtab
 set shiftwidth=4
 
@@ -438,6 +438,8 @@ nnoremap ma :Unite build:! -default-action=preview -auto-highlight<CR>
 "vimrc 編集、適用
 nnoremap <Space>v :e $VIMRC<CR>
 nnoremap <Space>V :source $VIMRC<CR>
+nnoremap <C-w>v :vs<CR><C-w><C-w><CR>:VimFilerCurrentDir<CR>
+nnoremap <C-w>s :sp<CR><C-w><C-w><CR>:VimFilerCurrentDir<CR>
 
 "insert mode
 "カーソル移動
@@ -449,6 +451,7 @@ inoremap <C-a> <HOME>
 inoremap <C-e> <END>
 "insert mode 抜ける
 inoremap jj <ESC>
+inoremap kk <ESC>==
 "insert mode かっこ
 "inoremap { {}<LEFT>
 "inoremap ( ()<LEFT>
