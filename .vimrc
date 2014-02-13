@@ -88,6 +88,8 @@ NeoBundle 'vim-scripts/vcscommand.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'mattn/emmet-vim' "http://techblog.yahoo.co.jp/tips/_zencoding/
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/gist-vim'
 " NeoBundle 'kana/vim-textobj-line'
 " }}}
 
@@ -164,6 +166,9 @@ let g:vimshell_user_prompt = 'getcwd()'
 " auto saveを有効に
 let g:auto_save = 1
 
+" gist-vim settings
+let g:gist_post_private = 1
+let g:gist_get_multiplefile = 1
 " }}}
 
 " general config {{{
@@ -272,6 +277,13 @@ set makeprg=env\ LANG=C\ make\ install
 
 " statusline
 set laststatus=2
+
+" markdown settings
+augroup MyAutoGroup
+    autocmd!
+    autocmd  BufNewFile,BufRead,BufEnter *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
+
 " "statusline change when insert mode
 " let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none'
 " if has('syntax')
