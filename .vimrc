@@ -283,6 +283,10 @@ augroup MyAutoGroup
     autocmd!
     autocmd  BufNewFile,BufRead,BufEnter *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
+augroup MyAutoGroupTest
+    autocmd!
+    autocmd  BufNewFile,BufRead,BufEnter *.{aaa} set filetype=aaa
+augroup END
 
 " "statusline change when insert mode
 " let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none'
@@ -419,8 +423,8 @@ nnoremap ba :UniteBookmarkAdd<CR>
 nnoremap vs :VimShell -split<CR>
 nnoremap <Space>t :Tlist<CR>
 nnoremap <Space>n :NERDTreeToggle<CR>
-nnoremap <Space>h :e %:r.h<CR>
-nnoremap <Space>c :e %:r.cpp<CR>
+" nnoremap <Space>h :e %:r.h<CR>
+" nnoremap <Space>c :e %:r.cpp<CR>
 nnoremap <Space>b :Unite buffer<CR>
 nnoremap <Space>r :Unite register<CR>
 nnoremap <Space>l :Unite file_mru -truncate<CR>
