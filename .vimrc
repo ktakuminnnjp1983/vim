@@ -90,7 +90,7 @@ NeoBundle 'mattn/emmet-vim' "http://techblog.yahoo.co.jp/tips/_zencoding/
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'jiangmiao/simple-javascript-indenter'
-NeoBundle 'marijnh/tern_for_vim'
+NeoBundle 'marijnh/tern_for_vim', {
             \ 'build': {
             \   'others': 'npm install'
             \}}
