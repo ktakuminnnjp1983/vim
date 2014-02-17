@@ -43,7 +43,6 @@ Bundle 'EasyMotion'
 Bundle 'quickrun.vim'
 Bundle 'Cpp11-Syntax-Support'
 Bundle 'taglist.vim'
-Bundle 'JavaScript-Indent'
 Bundle 'surround.vim'
 Bundle 'SrcExpl'
 Bundle 'Trinity'
@@ -90,6 +89,7 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'mattn/emmet-vim' "http://techblog.yahoo.co.jp/tips/_zencoding/
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
+NeoBundle 'jiangmiao/simple-javascript-indenter'
 " NeoBundle 'kana/vim-textobj-line'
 " }}}
 
