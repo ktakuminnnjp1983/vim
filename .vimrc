@@ -94,7 +94,6 @@ NeoBundle 'marijnh/tern_for_vim', {
             \ 'build': {
             \   'others': 'npm install'
             \}}
-" NeoBundle 'kana/vim-textobj-line'
 " }}}
 
 " plugin config {{{
@@ -331,28 +330,6 @@ augroup END
 
 " }}}
 
-" temp save {{{
-
-"augroup myjscolorscheme
-"    autocmd!
-"    "autocmd BufRead * :colorscheme risto "default color 
-"    colorscheme hybrid
-"augroup END
-"罫線をcurrent windowにのみ表示
-"augroup cch
-"  autocmd!
-"  autocmd WinLeave * set nocursorline
-"  "カーソルラインはカーソル移動速度が遅くなる
-"  "autocmd WinLeave * set nocursorcolumn
-"  autocmd WinEnter,BufRead * set cursorline
-"  "autocmd WinEnter,BufRead * set cursorcolumn
-"augroup END
-augroup mycppsyntax
-    autocmd!
-    "autocmd BufNewFile,BufRead *.cpp setf cpp
-augroup END
-
-" }}}
 
 " my commands {{{
 
