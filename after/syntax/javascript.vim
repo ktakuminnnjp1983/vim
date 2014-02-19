@@ -5,5 +5,5 @@ function! HighlightFunc()
     highlight myHashKey ctermfg=109
 endfunc
 
-autocmd BufNew,BufRead javascriptcall HighlightFunc()
+autocmd BufNew,BufRead javascript call HighlightFunc()
 call HighlightFunc()
