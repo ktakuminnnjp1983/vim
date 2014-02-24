@@ -1,4 +1,5 @@
 function! HighlightFunc()
+    " なぜか(\zsが認識されない..
     syntax match myFunc /[^("a-zA-Z0-9]\zs[A-Za-z_]\w\+\ze(/
     syntax match myFunc2 /([A-Za-z_]\w\+\ze(/
     syntax match myFunc3 /[^("a-zA-Z0-9]\zs[A-Za-z_]\w\+\ze<.*>(/
