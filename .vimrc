@@ -453,6 +453,8 @@ inoremap kk <ESC>==
 "inoremap { {}<LEFT>
 "inoremap ( ()<LEFT>
 inoremap :w <ESC>:w<CR>
+inoremap ( (<Space>
+inoremap ) <Space>)
 "command mode
 "emacs風
 cnoremap <C-a> <HOME>
