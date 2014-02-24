@@ -13,7 +13,7 @@ function! HighlightFunc()
     syntax keyword myString string
     syntax keyword myStringStream stringstream
     
-    " syntax match kkk /)/
+    syntax match kkk /)/
     
     highlight myFunc ctermfg=221
     highlight myComp ctermfg=173
@@ -29,7 +29,7 @@ function! HighlightFunc()
     highlight myString ctermfg=173
     highlight myStringStream ctermfg=173
     
-    " highlight kkk ctermfg=255
+    highlight kkk ctermfg=255
 endfunc
 
 autocmd BufNew,BufRead cpp call HighlightFunc()
