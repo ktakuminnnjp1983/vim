@@ -7,7 +7,7 @@ function! HighlightFunc()
     syntax match myEnum /[^"a-zA-Z0-9]E[A-Z]\w\+\ze\W/
     syntax match myfinstance /[^"a-zA-Z0-9]f[A-Z]\w\+\ze\W/
     syntax match myfginstance /[^"a-zA-Z0-9]fg[A-Z]\w\+\ze\W/
-    syntax match myConst /[^"a-zA-Z0-9][A-Z_][A-Z_0-9]\+ze\W/
+    syntax match myConst /[^"a-zA-Z0-9][A-Z_][A-Z_0-9]\+\ze\W/
     
     syntax keyword myVector vector
     syntax keyword myString string
