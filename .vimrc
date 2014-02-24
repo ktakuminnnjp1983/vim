@@ -347,7 +347,8 @@ function! ShowHelpOnWordV() range
     exec ":h " . selected
 endfunction
 command! -range ShowHelpOnWordV :call ShowHelpOnWordV()
-
+" VimShowHlGroup: Show highlight group name under a curso
+command! VimShowHlGroup echo synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name')
 " vimprocで結果を変数に代入
 " http://vim-users.jp/2010/08/hack168/
 " cursorの下の単語にresourcepickerを実行
@@ -453,8 +454,8 @@ inoremap kk <ESC>==
 "inoremap { {}<LEFT>
 "inoremap ( ()<LEFT>
 inoremap :w <ESC>:w<CR>
-inoremap ( (<Space>
-inoremap ) <Space>)
+" inoremap ( (<Space>
+" inoremap ) <Space>)
 "command mode
 "emacs風
 cnoremap <C-a> <HOME>
