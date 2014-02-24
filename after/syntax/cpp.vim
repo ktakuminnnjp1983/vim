@@ -1,5 +1,6 @@
 function! HighlightFunc()
     syntax match myFunc /[^"a-zA-Z0-9][A-Za-z_]\w\+\ze(/
+    syntax match myFunc2 /[^"a-zA-Z0-9][A-Za-z_]\w\\ze<.*>(/
     syntax match myComp /[^"a-zA-Z0-9][A-Z][a-z_A-Z]\+\ze\W/
     syntax match myComp2 /^[A-Z][a-z_A-Z]\+\ze\W/
     syntax match myClass /[^"a-zA-Z0-9]C[A-Za-z]\w\+\ze\W/
@@ -8,6 +9,7 @@ function! HighlightFunc()
     syntax match myfinstance /[^"a-zA-Z0-9]f[A-Z]\w\+\ze\W/
     syntax match myfginstance /[^"a-zA-Z0-9]fg[A-Z]\w\+\ze\W/
     syntax match myConst /[^"a-zA-Z0-9][A-Z_][A-Z_0-9]\+\ze\W/
+    syntax match myTest /<\zs Test \ze>/
     
     syntax keyword myVector vector
     syntax keyword myString string
@@ -15,7 +17,9 @@ function! HighlightFunc()
     
     syntax match kkk /)/
     
+    highlight myTest ctermfg=221
     highlight myFunc ctermfg=221
+    highlight myFunc2 ctermfg=221
     highlight myComp ctermfg=173
     highlight myComp2 ctermfg=173
     highlight myClass ctermfg=173
