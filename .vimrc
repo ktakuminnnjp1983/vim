@@ -172,6 +172,9 @@ let g:auto_save = 1
 " gist-vim settings
 let g:gist_post_private = 1
 let g:gist_get_multiplefile = 1
+
+" simple-javascript-indenter
+let g:SimpleJsIndenter_BriefMode = 1
 " }}}
 
 " general config {{{
