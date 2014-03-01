@@ -31,15 +31,7 @@ set wildmenu wildmode=list:full
 set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-"Bundle 'tpope/vim-fugitive' "Gitを便利に使える
-"Bundle 'Lokaltog/vim-easymotion'
 Bundle 'EasyMotion'
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-"Bundle 'tpope/vim-rails.git'
-"Bundle 'L9'
-"Bundle 'FuzzyFinder'
-"Bundle 'git://git.wincent.com/command-t.git'
-"Bundle 'neocomplcache-snippets_complete'
 Bundle 'quickrun.vim'
 Bundle 'Cpp11-Syntax-Support'
 Bundle 'taglist.vim'
@@ -58,6 +50,7 @@ if has('vim_starting')
 endif
 NeoBundle 'rking/ag.vim'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler'
@@ -284,16 +277,6 @@ set makeprg=env\ LANG=C\ make\ install
 " statusline
 set laststatus=2
 
-" markdown settings
-augroup MyAutoGroup
-    autocmd!
-    autocmd  BufNewFile,BufRead,BufEnter *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-augroup END
-augroup MyAutoGroupTest
-    autocmd!
-    autocmd  BufNewFile,BufRead,BufEnter *.{aaa} set filetype=aaa
-augroup END
-
 " "statusline change when insert mode
 " let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none'
 " if has('syntax')
@@ -332,7 +315,6 @@ augroup END
 " augroup END
 
 " }}}
-
 
 " my commands {{{
 
