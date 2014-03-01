@@ -508,11 +508,9 @@ function! ToggleTest()
     if g:mysc_hstate == 1
         let g:mysc_hstate = 0
         call unite#custom#source('file_mru', 'converters', ["converter_file_directory"])
-        echo "hage"
     else
         let g:mysc_hstate = 1
         call unite#custom#source('file_mru', 'converters', ["converter_smart_path"])
-        echo "gori"
     endif
 endfunction
 
@@ -607,8 +605,8 @@ let s:unite_source = {
 \   'name': 'lines',
 \ }
 function! s:unite_source.gather_candidates(args, context)
-  let path = expand('#:p')
-  let lines = getbufline('#', 1, '$')
+  let path = expand('%:p')
+  let lines = getbufline('%', 1, '$')
   let format = '%' . strlen(len(lines)) . 'd: %s'
   return map(lines, '{
   \   "word": printf(format, v:key + 1, v:val),
@@ -623,11 +621,9 @@ unlet s:unite_source
 
 "call unite#custom#source('file', 'converters', ['converter_add_updatetime'])
 call unite#custom#source('file_mru', 'matchers', ['matcher_file_name'])
-""call unite#custom#source('file_mru', 'ignore_pattern', '\.svn-base$\|\.jax$')
-""call unite#custom#source('file_rec', 'ignore_pattern', '\.d$\|\.jax$')
-"let g:unite_source_rec_ignore_pattern = '\.d$\|\.jax$'
-let g:unite_source_file_mru_ignore_pattern = '\.svn-base$\|\.jax$\|\.log\.\|\.log$\|COMMIT_EDITMSG' "おそらくmru.vimのデフォルト値おかしい
-" call unite#custom#source('file_mru', 'ignore_pattern', unite#sources#mru#define()[0]['ignore_pattern'] . '\|\.svn-base$\|\.jax$')
+" let g:unite_source_file_mru_ignore_pattern = '\.svn-base$\|\.jax$\|\.log\.\|\.log$\|\.d$\|\.o$' "おそらくmru.vimのデフォルト値おかしい
+" default に追加
+call unite#custom#source('file_mru', 'ignore_pattern', unite#sources#mru#define()[0]['ignore_pattern'] . '\.svn-base$\|\.jax$\|\.log\.\|\.log$\|\.d$\|\.o$')
 call unite#custom#source('file_rec', 'ignore_pattern', unite#sources#rec#define()[0]['ignore_pattern'] . '\|\/lcov\/\|\.\d$')
 "}}}
 
