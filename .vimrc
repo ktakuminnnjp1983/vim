@@ -448,7 +448,7 @@ nnoremap <Space>e :e .<CR>
 nnoremap <Space>B :buffers<CR>
 nnoremap <Space>R :ResourcePicker t ja_JP<CR>
 nnoremap <Space>F :Unite file<CR>
-nnoremap <Space>H :ShowHelpOnWord<CR>
+nnoremap <Space>h :ShowHelpOnWord<CR>
 nnoremap <Space>uf :Unite fold<CR>
 nnoremap <Space>ur :Unite file_rec<CR>
 nnoremap <C-@> :<Up><CR>
