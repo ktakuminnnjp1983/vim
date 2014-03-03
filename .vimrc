@@ -623,7 +623,7 @@ unlet s:unite_source
 call unite#custom#source('file_mru', 'matchers', ['matcher_file_name'])
 " let g:unite_source_file_mru_ignore_pattern = '\.svn-base$\|\.jax$\|\.log\.\|\.log$\|\.d$\|\.o$' "おそらくmru.vimのデフォルト値おかしい
 " default に追加
-call unite#custom#source('file_mru', 'ignore_pattern', '\.svn-base$\|\.jax$\|\.log\.\|\.log$\|\.d$\|\.o$')
+call unite#custom#source('file_mru', 'ignore_pattern', unite#sources#rec#define()[0]['ignore_pattern'] .'\|\.svn-base$\|\.jax$\|\.log\.\|\.log$\|\.d$\|\.o$')
 call unite#custom#source('file_rec', 'ignore_pattern', unite#sources#rec#define()[0]['ignore_pattern'] . '\|\/lcov\/\|\.\d$')
 "}}}
 
