@@ -30,7 +30,7 @@ set wildmenu wildmode=list:full
 "Vandle git clone http://github.com/gmarik/vundle.git ~/.vim/vundle
 set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle'
 Bundle 'EasyMotion'
 Bundle 'quickrun.vim'
 Bundle 'Cpp11-Syntax-Support'
