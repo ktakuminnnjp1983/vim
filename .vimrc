@@ -27,8 +27,8 @@ set wildmenu wildmode=list:full
 
 " plugin management {{{
 
-"Vandle git clone http://github.com/gmarik/vundle.git ~/.vim/vundle
-set runtimepath+=~/.vim/bundle/vundle/
+"Vandle git clone http://github.com/gmarik/Vundle.git ~/.vim/bundle/vundle
+set runtimepath+=~/.vim/bundle/Vundle/
 call vundle#rc()
 Bundle 'gmarik/Vundle'
 Bundle 'EasyMotion'
