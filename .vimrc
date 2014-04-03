@@ -20,6 +20,7 @@ set runtimepath&
 set path&
 
 set path+=$SPIDER_HOME/include/
+set path+=/usr/local/include/
 set path+=./
 set wildmenu wildmode=list:full
 
