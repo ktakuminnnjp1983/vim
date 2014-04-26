@@ -28,27 +28,19 @@ set wildmenu wildmode=list:full
 
 " plugin management {{{
 
-"Vandle git clone http://github.com/gmarik/Vundle.git ~/.vim/bundle/vundle
-set runtimepath+=~/.vim/bundle/Vundle/
-call vundle#rc()
-Bundle 'gmarik/Vundle'
-Bundle 'EasyMotion'
-Bundle 'quickrun.vim'
-Bundle 'Cpp11-Syntax-Support'
-Bundle 'taglist.vim'
-Bundle 'surround.vim'
-Bundle 'SrcExpl'
-Bundle 'Trinity'
-Bundle 'TagHighlight'
-Bundle 'Shougo/neobundle.vim'
-" Bundle 'jelera/vim-javascript-syntax'
-"https://github.com/scrooloose/nerdtree
-"grep 可能にしてみたhttps://gist.github.com/masaakif/414375
-Bundle 'scrooloose/nerdtree'
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
   call neobundle#rc(expand('~/.vim/bundle/'))
 endif
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'vim-scripts/taglist.vim'
+NeoBundle 'vim-scripts/TagHighlight'
+NeoBundle 'vim-scripts/trinity'
+NeoBundle 'vim-scripts/SrcExpl'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
@@ -77,7 +69,6 @@ NeoBundle 'vim-jp/cpp-vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'vim-scripts/vim-auto-save'
 NeoBundle 'vim-scripts/vcscommand.vim'
-" NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'mattn/emmet-vim' "http://techblog.yahoo.co.jp/tips/_zencoding/
@@ -563,7 +554,7 @@ endfunction
 
 "}}}
 
-" unite filters {{{
+" unite filters {{{l
 
 " :h unite-filters
 " let s:filters = {
