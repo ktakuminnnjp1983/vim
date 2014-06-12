@@ -417,6 +417,8 @@ nnoremap gr :Unite grep:.<CR>
 nnoremap g/ :Unite grep:. <CR><C-r>/<CR> 
 " カーソル位置の単語をgrep検索
 nnoremap gw :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W><CR>
+" 最後に選択した文字列をgrep検索
+nnoremap gv :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R>*<CR>
 nnoremap fi :normal gc<CR>:Unite find:.<CR>
 nnoremap ba :UniteBookmarkAdd<CR>
 nnoremap vs :VimShell -split<CR>
@@ -482,7 +484,7 @@ cnoremap <C-e> <END>
 vnoremap <Space>H :ShowHelpOnWordV<CR>
 
 "vnoremap <Space>H :<C-u>h <C-R>*<CR>
-vnoremap <Space>gr :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R>*<CR>
+vnoremap gr :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R>*<CR>
 
 "for snippets
 " Plugin key-mappings.
