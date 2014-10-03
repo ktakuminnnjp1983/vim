@@ -681,6 +681,6 @@ call unite#custom#source('file_rec', 'ignore_pattern', unite#sources#rec#define(
 " suseではmercurialのバージョンが低いのでubuntuからソースをもらいましょう
 " gitでvimdiff svnも同じ感じ
 " http://rubyonrails.gachinko.org/git/vimdiff/
-
+"./configure --enable-rubyinterp --enable-cscope --enable-gui --enable-gtk2-check --enable-gnome-check --with-x --enable-perlinterp --enable-pythoninterp --enable-python3interp --enable-xim --enable-rubyinterp --enable-multibyte --enable-pythoninterp=yes --with-python-config-dir=/usr/lib/python2.7/ --enable-python3interp --with-python3-config-dir=/usr/lib/python3.4/
 " }}}
 
