@@ -32,7 +32,6 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
   " call neobundle#rc(expand('~/.vim/bundle/'))
   call neobundle#begin(expand('~/.vim/bundle/'))
-  call neobundle#end()
 endif
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/nerdtree'
@@ -82,6 +81,7 @@ NeoBundle 'marijnh/tern_for_vim', {
             \ 'build': {
             \   'others': 'npm install'
             \}}
+call neobundle#end()
 " }}}
 
 " plugin config {{{
