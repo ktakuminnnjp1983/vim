@@ -674,6 +674,9 @@ let g:neomru#file_mru_ignore_pattern= '\.svn-base$\|\.jax$\|\.log\.\|\.log$\|\.d
 " memo {{{
 
 " vim最新版インストール　http://yuheikagaya.hatenablog.jp/entry/2013/04/23/211530
+" git clone git@github.com:vim/vim.git
+" ubuntu build-dep https://vim-jp.org/docs/build_linux.html
+" build-dep error https://qiita.com/tetsu_koba/items/904b03e908b040ed447d
 " Mercurial(hg)コマンド を利用　最新にする際は hg pull; hg update;
 " configureの失敗時は src/auto/config.logをみる soが無いと言われたのでシンボリックリンク作成→OK→コンパイルエラー Python.hがない　→　zypper in python-develで /usr/include/python2.6に　→　OK
 " ./configure --enable-rubyinterp --enable-cscope --enable-gui --enable-gtk2-check --enable-gnome-check --with-x --enable-perlinterp --enable-pythoninterp --enable-python3interp --enable-xim --enable-rubyinterp --enable-multibyte --enable-pythoninterp=yes --with-python-config-dir=/usr/lib/python2.6/config --enable-luainterp
